@@ -8,6 +8,7 @@ import json
 
 # Install playwright if not present
 if os.getenv("PLAYWRIGHT_INSTALL_RUN", "false").lower() != "true":
+    os.system("playwright install-deps")
     os.system("playwright install")
     os.environ["PLAYWRIGHT_INSTALL_RUN"] = "true"
 
